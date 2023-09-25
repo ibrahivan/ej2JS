@@ -12,14 +12,14 @@ listas = [
     let cols = document.querySelectorAll(".col");
     for (let i = 0; i < 4; i++) {
       cols[i].addEventListener("click", () => {
-        cargaLista(listas[i]);
+        cargaLista(listas[i]); // si no llevase dento una lista se pondria solo la funcion sin parentesis
       });
     }
   });
   
   function cargaLista(lista) {
     console.log(lista);
-    if (document.querySelector("ul")) {
+    if (document.querySelector("ul")) {  // si existes el ul, esque hay una lista llena, entonces la vaciamos sino creamos el ul
       console.log("Hay ul");
       var ul = document.querySelector("ul");
       ul.classList="list-group w-75 m-auto";
